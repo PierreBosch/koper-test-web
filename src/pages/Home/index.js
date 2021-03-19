@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaRegHandRock } from 'react-icons/fa';
+import SelectedWeapon from '../../components/SelectedWeapon';
 import { useBattle } from '../../hooks/battle';
 
 import {
@@ -16,39 +17,27 @@ function Home() {
   return (
     <Container>
       <Content>
-
         <BattleArena>
-          <WeaponSelected flipHandVertical weaponSelected={computerWeapon !== null}>
-            <span>
-              Computador
-              {' '}
-              {computerWeapon !== null && `escolheu ${computerWeapon.weaponName}`}
-            </span>
-            <div>
-              <LoadingResult>
-                {shakeHands && <FaRegHandRock />}
-              </LoadingResult>
-              {computerWeapon?.icon}
-            </div>
-          </WeaponSelected>
+          <SelectedWeapon
+            playerWeapon={computerWeapon}
+            playerName="Computador"
+            flipHandVertical
+            labelOnTop
+            showShakeHands={shakeHands}
+            shakeHandIcon={<FaRegHandRock />}
+          />
 
           <div>
             {winnerMessage !== null ? (<span>{ winnerMessage }</span>) : <span>VS</span>}
           </div>
 
-          <WeaponSelected weaponSelected={playerWeapon !== null}>
-            <div>
-              <LoadingResult>
-                {shakeHands && <FaRegHandRock />}
-              </LoadingResult>
-              {playerWeapon?.icon}
-            </div>
-            <span>
-              Você
-              {' '}
-              {playerWeapon !== null && `escolheu ${playerWeapon.weaponName}`}
-            </span>
-          </WeaponSelected>
+          <SelectedWeapon
+            flipHandVertical={false}
+            playerWeapon={playerWeapon}
+            playerName="Você"
+            showShakeHands={shakeHands}
+            shakeHandIcon={<FaRegHandRock />}
+          />
         </BattleArena>
 
         <Arsenal>
@@ -59,7 +48,6 @@ function Home() {
             </ArcadeButton>
           ))}
         </Arsenal>
-
       </Content>
     </Container>
   );
