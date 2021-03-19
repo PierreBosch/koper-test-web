@@ -32,8 +32,8 @@ export const Weapon = styled.div`
     align-items: center;
     flex-direction: ${(props) => (props.labelOnTop ? 'column-reverse' : 'column')};
 
-    > span {
-      font-size: 16px;
+    > span.weapon-label {
+      font-size: 16px !important;
     }
 
     > div {
