@@ -13,7 +13,7 @@ function SelectedWeapon({
         </LoadingResult>
         {playerWeapon?.icon}
       </div>
-      <span>
+      <span className="weapon-label">
         { playerName }
         {' '}
         {playerWeapon !== null && `escolheu ${playerWeapon.weaponName}`}
