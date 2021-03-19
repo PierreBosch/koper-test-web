@@ -13,7 +13,7 @@ const BattleProvider = ({ children }) => {
     {
       id: 1,
       weaponName: 'pedra',
-      icon: <FaRegHandRock size={35} />,
+      icon: <FaRegHandRock />,
       wins: [
         { weaponName: 'lagarto', howWins: 'esmaga' },
         { weaponName: 'tesoura', howWins: 'amassa' },
@@ -22,7 +22,7 @@ const BattleProvider = ({ children }) => {
     {
       id: 2,
       weaponName: 'papel',
-      icon: <FaRegHandPaper size={35} />,
+      icon: <FaRegHandPaper />,
       wins: [
         { weaponName: 'pedra', howWins: 'cobre' },
         { weaponName: 'spock', howWins: 'refuta' },
@@ -31,7 +31,7 @@ const BattleProvider = ({ children }) => {
     {
       id: 3,
       weaponName: 'tesoura',
-      icon: <FaRegHandScissors size={35} />,
+      icon: <FaRegHandScissors />,
       wins: [
         { weaponName: 'papel', howWins: 'corta' },
         { weaponName: 'lagarto', howWins: 'decapita' },
@@ -40,7 +40,7 @@ const BattleProvider = ({ children }) => {
     {
       id: 4,
       weaponName: 'lagarto',
-      icon: <FaRegHandLizard size={35} />,
+      icon: <FaRegHandLizard />,
       wins: [
         { weaponName: 'spock', howWins: 'envenena' },
         { weaponName: 'papel', howWins: 'come' },
@@ -49,7 +49,7 @@ const BattleProvider = ({ children }) => {
     {
       id: 5,
       weaponName: 'spock',
-      icon: <FaRegHandSpock size={35} />,
+      icon: <FaRegHandSpock />,
       wins: [
         { weaponName: 'tesoura', howWins: 'derrete' },
         { weaponName: 'pedra', howWins: 'vaporiza' },

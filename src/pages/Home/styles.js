@@ -45,6 +45,15 @@ export const Content = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+
+  @media(max-width: 580px) {
+    width: 100%;
+    padding: 8px;
+    span {
+      font-size: 18px;
+      font-family: 'Fredoka One';
+    }
+  }
 `;
 
 export const BattleArena = styled.div`
@@ -60,11 +69,26 @@ export const BattleArena = styled.div`
 
   > div {
     padding: 24px;
+    text-align: center;
   }
 
   span {
     font-size: 24px;
+    text-align: center;
     font-family: 'Fredoka One';
+  }
+
+  @media(max-width: 580px) {
+    padding: 16px;
+
+    > div {
+      padding: 8px;
+    }
+
+    span {
+      font-size: 16px;
+      font-family: 'Fredoka One';
+    }
   }
 `;
 
@@ -90,7 +114,6 @@ export const WeaponSelected = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-      /* padding: 36px 40px; */
       border: 2px dashed ${(props) => (props.weaponSelected ? '#8257e6' : 'rgb(55, 54, 60)')};
       border-radius: 5px;
       height: 150px;
@@ -106,6 +129,30 @@ export const WeaponSelected = styled.div`
     svg {
       width: 100px !important;
       height: 100px !important;
+    }
+
+    @media(max-width: 580px) {
+      > div {
+        width: 100px;
+        height: 100px;
+      }
+
+      svg {
+        width: 80px !important;
+        height: 80px !important;
+      }
+    }
+
+    @media(max-width: 320px) {
+      > div {
+        width: 100px;
+        height: 100px;
+      }
+
+      svg {
+        width: 50px !important;
+        height: 50px !important;
+      }
     }
 `;
 
@@ -130,6 +177,11 @@ export const ArcadeButton = styled.button`
   transition: background 200ms ease-in-out;
   text-transform: capitalize;
 
+  svg {
+    width: 35px;
+    height: 35px;
+  }
+
   > span {
     margin-top: 8px;
   }
@@ -148,5 +200,30 @@ export const ArcadeButton = styled.button`
     box-shadow: 0px 3px 0px ${(props) => darken(0.2, props.backgroundColor)}, 0px 3px 6px rgba(0,0,0,.9);
     position: relative;
     top: 6px;
+  }
+
+  @media(max-width: 580px) {
+    width: 60px;
+    height: 60px;
+    font-size: 14px;
+
+    span {
+      display: none;
+    }
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  @media(max-width: 320px) {
+    width: 50px;
+    height: 50px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
   }
 `;

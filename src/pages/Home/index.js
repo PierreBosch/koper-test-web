@@ -17,15 +17,6 @@ function Home() {
     <Container>
       <Content>
 
-        <Arsenal>
-          {weapons.map((weapon) => (
-            <ArcadeButton selected={computerWeapon?.weaponName === weapon.weaponName} backgroundColor="#04d361" disabled type="button">
-              {weapon.icon}
-              <span>{weapon.weaponName}</span>
-            </ArcadeButton>
-          ))}
-        </Arsenal>
-
         <BattleArena>
           <WeaponSelected flipHandVertical weaponSelected={computerWeapon !== null}>
             <span>
