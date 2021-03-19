@@ -4,15 +4,13 @@ import SelectedWeapon from '../../components/SelectedWeapon';
 import { useBattle } from '../../hooks/battle';
 
 import {
-  Container, Content, BattleArena, WeaponSelected, Arsenal, ArcadeButton, LoadingResult,
+  Container, Content, BattleArena, Arsenal, ArcadeButton,
 } from './styles';
 
 function Home() {
   const {
     weapons, shakeHands, playerWeapon, resetingGame, battleFight, computerWeapon, winnerMessage,
   } = useBattle();
-
-  const showIcon = (Icon) => <Icon size={30} />;
 
   return (
     <Container>
